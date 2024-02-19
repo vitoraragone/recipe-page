@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+--title-color: hsl(14, 45%, 36%);
+--light-gray: hsl(30, 18%, 87%);
+--dark-charcoal: hsl(24, 5%, 18%);
+--text-color: hsl(30, 10%, 34%);
+--dark-raspbery: rgba(246, 165, 203, 0.243);
+--dark-raspberry-text: hsl(332, 51%, 32%);
+--paragraphy: "Outfit", sans-serif;
+--title: "Young Serif", serif;
+}
+
+body {
+  padding: 20px;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: bisque
+}
+
+hr {
+  margin: 30px 0;
+  background-color: rgba(0, 0, 0, 0.258);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content {
+  margin: 0 40px;
+}
+
+.card-conteudo {
+  background-color: white; 
+  padding: 40px 0;
+  -webkit-box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.26);
+  -moz-box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.26);
+  box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.26);
+  border-radius: 20px;
+}
+
+.imagem {
+  margin: 0 40px;
+}
+
+
+.second-title {
+  font-family: var(--title);
+  font-weight: 300;
+  font-size: 32px;
+  color: var(--title-color);
+}
+
+
+.focus-in-expand {
+	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+.imagem img {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+}
+
+
+.titulo h1 {
+  font-family: var(--title);
+  font-weight: 400;
+  margin: 20px 0 10px 0;
+  font-size: 32px;
+}
+
+.titulo p {
+  font-size: 16px;
+  font-family: var(--paragraphy);
+  max-width: 75ch;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.tempo-preparacao {
+  margin: 50px 0;
+  background-color: var(--dark-raspbery);
+  border-radius: 8px;
+  padding: 16px;
+  font-family: var(--paragraphy);
+}
+
+.tempo-preparacao h2 {
+  color: var(--dark-raspberry-text);
+}
+
+.tempo-preparacao li::marker {
+  color: var(--dark-raspberry-text);
+}
+
+.tempo-preparacao ul {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tempo-preparacao span {
+  color: var(--dark-charcoal);
+  font-weight: 600;
+}
+
+
+
+.ingredients-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  font-family: var(--paragraphy);
+}
+
+.ingredients-list li::marker {
+  color: var(--title-color);
+}
+
+
+.instructions-list ul {
+  list-style-type: decimal;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  font-family: var(--paragraphy);
+}
+
+.instructions-list li::marker {
+  color: var(--title-color);
+}
+
+
+.instructions-list span {
+  color: var(--dark-charcoal);
+  font-weight: 600;
+}
+
+.nutrition p {
+  font-family: var(--paragraphy);
+  margin: 10px 0;
+}
+
+ .nutrition-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: start;
+ }
+
+ .nutrition-column p {
+  padding: 5px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.243);
+ }
+
+ .nutrition-column p:last-child {
+  border-bottom: none;
+ }
+
+ .macro p {
+  color: var(--title-color);
+  font-weight: 600;
+ }
+
+
+@media screen and (max-width: 780px) {
+body {
+  padding: 0;
+  place-content: start;
+}
+
+.content {
+  margin: 20px;
+}
+
+  .card-conteudo {
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .imagem { 
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .imagem img {
+    border-radius: 0;
+  }
+
+  .tempo-preparacao {
+    margin: 30px 0;
+  }
+}
+
+ @-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+ 
